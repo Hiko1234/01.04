@@ -1,9 +1,11 @@
 import React from 'react'
 // import custom modules
 import { Calculator } from '../../modules/Calculator';
+// components
+import Number from '../numbers/Number';
 
 export const First = () => {
-    const calc = new Calculator();
+    // const calc = new Calculator();
     const SOME_TEXT = 'Hello world';
     function calcTwoNumbers(a, b){
         return a + b;
@@ -17,7 +19,7 @@ export const First = () => {
             <h2>Test Component</h2>
             <div>
                 <p>{SOME_TEXT}</p>
-                <p>{calc.sum(3, 2)}</p>
+                {/* <p>{calc.sum(3, 2)}</p> */}
             </div>
             <h2>gegw</h2>
             <p>{calcTwoNumbers(2, 4)}</p>
@@ -25,7 +27,7 @@ export const First = () => {
                 {
                     arrayNumber.map((el)=>{
                         return (
-                            <p key={el}>{el}</p>
+                            <Number number={el} key={el}/>
                         )
                     })
                 }
